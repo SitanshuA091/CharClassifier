@@ -2,20 +2,6 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 from PIL import Image
-st.markdown(
-    """
-    <style>
-        body {
-            background-image: url("C:\Workspace_main\HD wallpaper_ batman, spiderman, superheroes, hd.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 model_path = 'model.keras' 
 model = tf.keras.models.load_model(model_path)
 
