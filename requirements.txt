@@ -1,3 +1,3 @@
 streamlit
-PIL
-tensorflow
+Pillow
+TensorFlow
