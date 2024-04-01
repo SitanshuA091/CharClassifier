@@ -7,3 +7,4 @@
 - The model architecture is saved as a json file
 - the model weights are saved in a hdd5 file
 - The Data Directory has the Custom Image set for both characters
+- The App is available at ~ https://charclassifier-5gv4v66zpisfeuqv8jceqw.streamlit.app/
