@@ -2,8 +2,13 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 from PIL import Image
-model_path = 'model.keras' 
-model = tf.keras.models.load_model(model_path)
+from tensorflow.keras.models import  model_from_json
+json_file = open('model.json', 'r')
+loaded_model_json = json_file.read()
+json_file.close()
+loaded_model = model_from_json(loaded_model_json)
+# load weights into new model
+loaded_model.load_weights("model.h5")
 
 def preprocess_image(image):
     image = tf.image.resize(image, (256, 256))
