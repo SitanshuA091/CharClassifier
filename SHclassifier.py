@@ -19,6 +19,10 @@ def preprocess_image(image):
     return image
 
 st.title("Superhero Machine Classification App")
+Img = Image.open('SH.jpg')
+st.sidebar.info('This binary Classifier classifies the identity of the Superhero (either Spider-Man or Batman')
+st.sidebar.image(Img)
+
 
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
