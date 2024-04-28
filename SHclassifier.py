@@ -31,7 +31,7 @@ if uploaded_file is not None:
     st.image(image, caption="Uploaded Image.", use_column_width=True)
     processed_image = preprocess_image(np.array(image))
 
-    prediction = model.predict(np.expand_dims(processed_image, 0))
+    prediction = loaded_model.predict(np.expand_dims(processed_image, 0))
     if prediction > 0.5:
         st.write("It's your friendly neighbourhood Spider-Man!")
     else:
